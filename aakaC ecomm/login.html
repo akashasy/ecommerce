@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: rgb(180, 177, 177);
+        
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        
+       
+        
+    }
+    .header{
+      
+        text-transform: uppercase;
+        text-align: center;
+        
+        margin: 70px;
+        
+    }
+    .Login{
+        width: 300px;
+        height: 400px;
+        /* display:inline-block; */
+        background-color: white;
+       margin-left: 30px;
+       
+       
+        
+    }
+   .upper{
+       text-align: center;
+       font-size: 18px;
+       padding: 5px;
+       background-color: chocolate;
+       height: 25%;
+       margin-bottom: 10px;
+      
+   }
+   .upper h2{
+       margin-top: 10px;
+       color: white;
+   }
+   
+   input[type="email"]
+   {
+       outline: none;
+       border: none;
+       border-bottom: 1px solid black;
+       padding: 10px;
+       font-size: 15px;
+       width: 90%;
+       margin: 10px;
+
+   }
+   input[type="password"]
+   {
+       outline: none;
+       border: none;
+       border-bottom: 1px solid black;
+       font-size: 15px;
+       padding: 10px;
+       width: 90%;
+       margin: 10px;
+   }
+   .Login #p1{
+       font-size: 15px;
+       text-align: right;
+       margin-right: 20px;
+   }
+   input[type="submit"]
+   {
+       outline: none;
+       border: none;
+       border-radius: 20px;
+       background-color: grey;
+       color: honeydew;
+       font-size: 15px;
+       padding: 5px 20px ;
+       text-transform: uppercase;
+       margin-top: 50px;
+       margin-left: 15px;
+      
+   }
+   .social{
+           font-size: 30px;
+           
+           color: white;
+       }
+       .social i{
+           padding: 10px;
+       }
+   .social1 i{
+                   font-size: 30px;
+                   border-radius: 30px;
+                   padding: 10px 0px;
+                   text-align: center;
+                   width: 75px;
+                   color: rgb(96, 96, 248);
+                   
+                   box-shadow: 2px 2px 5px skyblue;
+               }
+            
+               a{
+                   text-decoration: none;
+                  
+               
+               }
+               .social a i{
+                   color: white;
+                   
+               }
+               .social a i:hover{
+                   color:lightsalmon;
+               }
+                input[type="submit"]:hover{
+                   background-color: red;
+               }
+
+
+</style>
+<body>
+    <form action="/index.html" method="get" onsubmit="return welcome()">
+    <div class="header"></div>
+<div class="box">
+<div class="Login">
+    <div class="upper" > <h2>LOGIN</h2>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook"></i></a>
+           <a href=""><i class="fa fa-twitter"></i></a>
+           <a href=""><i class="fa fa-google"></i></a>
+          </div>
+    
+    </div>
+    <div>
+    <input type="email"
+    name="email"
+    id="email"
+    placeholder="Enter Your Email"
+    required
+    >
+</div>
+<div>
+    <input type="password"
+    name="pass"
+    id="pass"
+    placeholder="Enter Your Password" required>
+
+    </div>
+    <a href=""><p id="p1"> <b> Forgot Password?</b></p></a>
+    <input type="submit" value="Login">
+</form>
+</div>
+<script>
+  function welcome(){
+    alert("Welcome back");
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

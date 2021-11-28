@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   <style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #9b59b6;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+
+.container {
+	
+	/* padding: 20px; */
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px; 
+	 max-width: 100%;
+}
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 10px 40px;
+}
+
+.header h2 {
+	margin: 0;
+}
+
+.form {
+	padding: 10px 20px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+h4{
+  padding-left: 30px;
+}
+h4 a{
+  /* border: 2px solid blue; */
+  color: white;
+  background-color: blue;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+h4 a:hover{
+  background-color: red;
+}
+/* button:hover{
+  background-color: orange;
+  
+  border: orange;
+} */
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form name="myform" id="form" class="form" action="/index.html" method="get" onsubmit=" return validateForm()">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Akash Yadav" id="username" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="email" placeholder="abc@gmail.com" id="email" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone no.</label>
+                <input type="tel" placeholder="Phone(+91)" id="phone" required/>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="address">Address</label>
+                <input type="text"  placeholder=" Enter Your Full Address" id="address" required/>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="password">Create Password </label>
+              <input type="password" placeholder="Enter Password " id="password"/>
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+          </div>
+            <button onclick="return validateForm()">SUBMIT</button>
+        </form>
+        <h4> Already Have an account? <a href="./login.html">  Login</a></h4>
+        </div>
+        <script type="text/javascript">
+            function validateForm() {
+                var myform= document.forms["myform"];
+        //         var u = myForm["username"].value;
+        // var p = myForm["password"].value;
+              var u = document.getElementById("username").value;
+              var p = document.getElementById("password").value;
+              var e =document.getElementById("email").value;
+              var a=document.getElementById('address').value;
+              var tel=document.getElementById('phone').value;
+      
+              if (u == "") {
+                alert("Please enter your Username");
+                myform["username"].focus();
+                return false;
+              }
+
+              if (e == "") {
+                alert("Please enter you email");
+                myform["email"].focus();
+                return false;
+              }
+              if (tel== "" ) {
+                alert("Please enter your phone number");
+                myform["email"].focus();
+                return false;
+              }
+              if(isNaN(tel)){
+                alert("Please enter numbers only");
+                myform["number"].focus();
+                return false;
+              }
+              if (a == "") {
+                alert("Please enter your address");
+                myform["address"].focus();
+                return false;
+              }
+              
+              if (p == "") {
+                alert("Please enter you Password");
+                myform["password"].focus();
+                return false;
+              }
+             
+              alert("You are Logged in!, Enjoy shopping");
+              return true;
+            }
+ 
+   </script>
+   <!-- <script src="./practical15.js"></script> -->
+</body>
+</html>
