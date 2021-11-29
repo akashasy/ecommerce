@@ -246,6 +246,10 @@
     font-weight: 700;
     border-radius: 50%;
   }
+  #search:hover{
+    color: blue;
+
+  }
   
   @media only screen and (max-width: 968px) {
     .wrapper .nav-list {
